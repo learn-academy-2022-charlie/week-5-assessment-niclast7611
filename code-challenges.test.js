@@ -52,13 +52,13 @@ describe('codedMessage', () => {
 //return the new string 
 
 // const codedMessage = (string) => {
-//     let array = string.split('')
-//     for(let i=0; i<array.length; i++){
-//         if(array[i] === 'a' || 'A'){
-//             array.indexOf(i) = '4'
-//         }
-//         return array.join('')
-//     }
+    // let array = string.split('')
+    // for(let i=0; i<array.length; i++){
+    //     if(array[i] === 'a' || 'A'){
+    //         array.indexOf(i) = '4'
+    //     }
+    //     return array.join('')
+    // }
 // }
 
 
@@ -101,18 +101,30 @@ describe('singLetter', () => {
 //If the words include the letter then i will push it into an emptyarr that will be at the top of the method
 //I will return the emptyarr
 
+// Ruby
+// def sing_letter(array, letter)
+// #     empty_arr = []
+// #      array.map do |value|
+// #      if value.include?(letter)
+// #         empty_arr.push(value)
+// #      end
+// #      end
+// #      empty_arr
+// # end
 
-// const singLetter = (array , letter) => {
-//     let emptyArr = []
-//     array.map((value) => {
-        
-//       if(value.includes(letter)){
-//         emptyArr.push(value)
-//         }
-         
-//     })
-// return emptyArr 
-// }
+const singLetter = (array, letter) => {
+    let lowercase = array.toLowerCase
+    let emptyArr = []
+    lowercase.map(value => {
+        value.split('')
+        if (value.includes(letter)){
+             emptyArr.push(value)
+        }
+       
+    })
+}
+
+
     
 
 
@@ -147,3 +159,23 @@ describe('fullHouse', () => {
 //     ReferenceError: fullHouse is not defined
 
 // b) Create the function that makes the test pass.
+
+// Psuedo Code
+
+// const fullHouse = (arrNums) => {
+//     let count1 = 0
+//     let count2 = 0
+//     for(let i = 1; i<arrNums.length; i++){
+//         if(arrNums[i] === arrNums[i-1]){
+//             count1 +=1
+//         }
+//         else if(arrNums[i+1] === arrNums[i+1]){
+//             count2 +=2
+//         }
+//     }
+//     if(count1 === 3 && count2 === 2){
+//         return true 
+//     }
+//     else {
+//         return false }
+// }
