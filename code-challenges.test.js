@@ -41,7 +41,7 @@ describe('codedMessage', () => {
 
 // b) Create the function that makes the test pass.
 
-// Psuedo Code
+// Psuedo Code first go failed new Psuedo Code below 
 // I will create a function called codedMessage that takes in a string 
 //I will then transform the string to an array using .split('')
 //I will iterate over the array to see if each index equals aeiou
@@ -51,15 +51,33 @@ describe('codedMessage', () => {
 //After all that i will use .join('') to turn the array back to a string 
 //return the new string 
 
-// const codedMessage = (string) => {
-    // let array = string.split('')
-    // for(let i=0; i<array.length; i++){
-    //     if(array[i] === 'a' || 'A'){
-    //         array.indexOf(i) = '4'
-    //     }
-    //     return array.join('')
-    // }
-// }
+// I ended up scratching that idea because I ran into a wall and I found a string method called .replace and used that to solve the problem and simpler 
+// So i created a function called codedMessage that takes in a string as an argument
+// I then looped over each index of the string using a for loop
+// Once i looped over it i made a new varibale where i lowercased the first letter and sliced the string back together I called this variable stringLower
+// I then set a new variable equal to stringLower and appended the replaceAll method with the arguments needed in this case 'a' and replaced it with '4'
+    // i set that equal to newString 
+// I did that same thing for e i and o setting each them equal to newString 1-3
+//  at the end i capitalized the first index of the string and returned that line 
+
+
+const codedMessage = (string) => {
+    for(let i=0; i<string.length; i++){
+     let stringLower = string[0].toLowerCase() + string.slice(1)
+
+        let newString =  stringLower.replaceAll('a', '4')
+        let newString1 = newString.replaceAll('e', '3')
+        let newString2 = newString1.replaceAll('i', '1')
+       let newString3 = newString2.replaceAll('o', '0')
+       return newString3[0].toUpperCase() + newString3.slice(1)
+  
+     }
+}
+// I GOT GREEN 
+// PASS  ./code-challenges.test.js
+// codedMessage
+//   ✓ takes in a string and returns a coded message (2 ms)
+
 
 
 
@@ -113,16 +131,15 @@ describe('singLetter', () => {
 // # end
 
 const singLetter = (array, letter) => {
-    let lowercase = array.toLowerCase
     let emptyArr = []
-    lowercase.map(value => {
-        value.split('')
-        if (value.includes(letter)){
-             emptyArr.push(value)
-        }
-       
-    })
-}
+    for(var i = 0; i < array.length; i++) {
+      if(array[i].search(letter) > -1){
+        return emptyArr.push(array[i]);
+      }
+    }
+    return emptyArr;
+  }
+  
 
 
     
@@ -162,20 +179,20 @@ describe('fullHouse', () => {
 
 // Psuedo Code
 
-// const fullHouse = (arrNums) => {
-//     let count1 = 0
-//     let count2 = 0
-//     for(let i = 1; i<arrNums.length; i++){
-//         if(arrNums[i] === arrNums[i-1]){
-//             count1 +=1
-//         }
-//         else if(arrNums[i+1] === arrNums[i+1]){
-//             count2 +=2
-//         }
-//     }
-//     if(count1 === 3 && count2 === 2){
-//         return true 
-//     }
-//     else {
-//         return false }
-// }
+const fullHouse = (arrNums) => {
+    let count1 = 0
+    let count2 = 0
+    for(let i = 1; i<arrNums.length; i++){
+        if(arrNums[i] === arrNums[i-1]){
+            count1 +=1
+        }
+        else if(arrNums[i+1] === arrNums[i+1]){
+            count2 +=2
+        }
+    }
+    if(count1 === 3 && count2 === 2){
+        return true 
+    }
+    else {
+        return false }
+}
