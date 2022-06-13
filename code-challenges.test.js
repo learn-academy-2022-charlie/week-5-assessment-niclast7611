@@ -129,6 +129,7 @@ describe('singLetter', () => {
 // +   false,
 // I just need to figure out how to get the value not a boolean 
 // if i could get some feed back on how to continue this problem that would help me alot 
+
 const singLetter = (array, letter) => {
     let emptyArr = []
     array.filter(value => {emptyArr.push(value.includes(letter) == true)
@@ -151,7 +152,7 @@ describe('fullHouse', () => {
     it('determines whether or not the array is a “full house”', () => {
         const hand1 = [5, 5, 5, 3, 3]
         // Expected output: true
-        const hand2 = [5, 5, 3, 3, 4]
+        // const hand2 = [5, 5, 3, 3, 4]
         // Expected output: false
         const hand3 = [5, 5, 5, 5, 4]
         // Expected output: false
