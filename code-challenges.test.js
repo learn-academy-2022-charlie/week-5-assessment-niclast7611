@@ -129,15 +129,19 @@ describe('singLetter', () => {
 // +   false,
 // I just need to figure out how to get the value not a boolean 
 // if i could get some feed back on how to continue this problem that would help me alot 
+const singLetter = (array, letter) => array.filter(value => 
+    value.toLowerCase().indexOf(letter) !== -1)
 
-const singLetter = (array, letter) => {
-    let emptyArr = []
-    array.filter(value => {emptyArr.push(value.includes(letter) == true)
-    })
-    return emptyArr
-}
+    // I GOT GREEN
+    // PASS  ./code-challenges.test.js
+    // codedMessage
+    //   ✓ takes in a string and returns a coded message (7 ms)
+    // singLetter
+    //   ✓ all the words that contain that particular letter. (1 ms)
+    // fullHouse
+    //   ✓ determines whether or not the array is a “full house” (1 ms)
 
-
+    //After asking a classmate I forgot that i didnt need to create a new array if i was using .filter because it returns a new array already. 
   
 
 
@@ -152,7 +156,7 @@ describe('fullHouse', () => {
     it('determines whether or not the array is a “full house”', () => {
         const hand1 = [5, 5, 5, 3, 3]
         // Expected output: true
-        // const hand2 = [5, 5, 3, 3, 4]
+        const hand2 = [5, 5, 3, 3, 4]
         // Expected output: false
         const hand3 = [5, 5, 5, 5, 4]
         // Expected output: false
