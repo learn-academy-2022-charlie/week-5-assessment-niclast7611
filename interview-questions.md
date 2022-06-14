@@ -28,7 +28,7 @@ Researched answer: Ruby on Rails is a gem that gives the dev a framework which p
 
 Your answer: Relational databases are basically excel spreadsheets for devs, they are divided into rows and columns for easy and organized storage of data.
 
-Researched answer: Relational databases are a collection of data items with predefined relationships between them, they are organized by rows and columns in a table. This allows for easy readbility and storage of data. An example of a relational database is PostgreSQL we were briefly introduced to this database in challenges this week, familiarizing ourselves with accessing, creating, and operating data and the application.
+Researched answer: Relational databases are a collection of data items that are organized by rows and columns in a table. This allows for easy readbility and storage of data. Kind of like Excel spreadsheet. Ruby uses Active Record as a relational database, an example of what a table would look like is if you have a person as a table the rows would be labeled creditcard, house, children, spouse, etc where we can fill in the values of if that person has that item and how many they have.
 
 5. What are primary keys? Why are they important?
 
